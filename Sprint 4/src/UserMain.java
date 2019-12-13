@@ -6,10 +6,16 @@ public class UserMain {
 
 public void UserMain() throws IOException {
 		User x = new User();
+
 		User curruse=new User();
 		curruse=x.login();
 		
 		
+
+		x.setUser_type("User");
+		User curruse=new User();
+		curruse=x.login();
+
 		while(true) {
 			
 			System.out.println("Do you wish to perform another operation? Press 1 / Exit? Press 2");

@@ -6,8 +6,15 @@ import java.util.Timer;
 public class StoreOwnerMain {
 	
 public void StoreOwnerMain() throws IOException {
+
 	StoreOwner z = new StoreOwner();
 	  z.StoreOwner_login();
+
+	User x = new User();
+	x.setUser_type("StoreOwner");
+	StoreOwner z = new StoreOwner();
+	z.StoreOwner_login();
+
 	int r=1;
 	while(r==1) {
 	System.out.println("Want to Add Products? Press 0 / Want to Add Store? Press 1 / Want to show views? Press 2");

@@ -6,20 +6,37 @@ import java.util.Timer;
 public class Main{
 
 public static void main(String[] args) throws IOException {
-	Collaborator v=new Collaborator();
-	Admin d = new Admin();
-	StoreOwner c = new StoreOwner();
+
+	//Collaborator v=new Collaborator();
+	//Admin d = new Admin();
+	//StoreOwner c = new StoreOwner();
 	//d.EditOffer();
-	d.deleteOffer();
+	//d.deleteOffer();
+
+	//Collaborator v=new Collaborator();
+	//Admin d = new Admin();
+	//d.deleteoffer();
+
 	//v.addProduct_bycollaborator();
 	//v.viewStatistics_bycollaborator();
 	//StoreOwner c = new StoreOwner();
     //c.check_History_of_collaborator();
 	//c.deleteProduct();
+
      //c.EditProduct();
 	  //c.deleteProduct();
 }}
  /*User q = new User();
+
+	//c.EditProduct1();
+	//Scanner scan = new Scanner(System.in);
+	//String s = scan.next();
+	//c.edit(s);
+	//User s = new User();
+	//s.BuyProduct(s);
+//}}
+ User q = new User();
+
 	System.out.println("Welcome to 5od Fekra w Eshtery Bokra!"); 
 	System.out.println("New Account? Press 0 / Login? Press 1");
 	Scanner l = new Scanner(System.in);
@@ -35,16 +52,24 @@ public static void main(String[] args) throws IOException {
 		AdminMain d = new AdminMain();
 		d.AdminMain();
 		
+
 	}
 	else if(o == 1) {
 		UserMain s = new UserMain();
 		s.UserMain();
+
 	
 	}
 	else if(o == 2) {
 		StoreOwnerMain c = new StoreOwnerMain();
 		c.StoreOwnerMain();
 		
+
+	}
+	else if(o == 2) {
+		StoreOwnerMain c = new StoreOwnerMain();
+		c.StoreOwnerMain();		
+
 	}
 
 	else
@@ -56,5 +81,7 @@ public static void main(String[] args) throws IOException {
 
 	}
 
-	
+
 }*/
+
+

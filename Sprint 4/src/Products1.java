@@ -6,6 +6,7 @@ String Brand;
 String Category;
 
 
+
 public Products1(String name, String price, String brand, String category) {
 	super();
 	Name = name;
@@ -18,6 +19,8 @@ public Products1() {
 	super();
 	// TODO Auto-generated constructor stub
 }
+
+
 
 public String getName() {
 	return Name;
