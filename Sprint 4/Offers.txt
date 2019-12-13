@@ -1,0 +1,8 @@
+shoes
+15
+choclate
+4
+phone
+100
+water
+10
