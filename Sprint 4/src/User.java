@@ -13,6 +13,9 @@ public class User {
 	public String Password_verify ;
 	public String type_verify ;
 	private Controller User_verify;
+
+	
+
 	private String User_type;
 
 public String getUser_type() {
@@ -70,6 +73,42 @@ public void setType(String type) {
 	Type = type;
 }
 
+
+
+public User login() throws IOException {
+    User u=new User();
+    Scanner input3 = new Scanner(System.in);
+	System.out.println("Enter Your type Admin? / User? / StoreOwner? ");
+	type_verify = input3.next();
+	Scanner input1 = new Scanner(System.in);
+	System.out.println("Enter Username : ");
+	Username_verify = input1.next();
+	Scanner input2 = new Scanner(System.in);
+    System.out.println("Enter Password : ");	    
+    Password_verify = input2.next();
+    Controller User_verify = new Controller();
+	u=User_verify.verify(type_verify,Username_verify,Password_verify);
+	if(u!=null) {
+		return u;
+	}
+	return null;
+}
+public void createaccount() throws IOException{		
+		File f = new File("Users.txt");
+		FileWriter h = new FileWriter(f, true);
+		System.out.println("Enter Your type Admin? / User? / StoreOwner? /C-Storename ");
+		Scanner z = new Scanner(System.in);
+		this.setType(z.next());
+		System.out.println("Enter username");
+		Scanner Password_verify = new Scanner(System.in);
+		this.setUsername(Password_verify.next());
+		System.out.println("Enter password");
+		Scanner y = new Scanner(System.in);
+		this.setPass(y.next());
+		System.out.println("Enter email");
+		Scanner u = new Scanner(System.in);
+		this.setEmail(u.next());
+
 public User login() throws IOException {
 	    User u=new User();
 	    Scanner input3 = new Scanner(System.in);
@@ -114,6 +153,7 @@ public void createaccount() throws IOException{
 		System.out.println("Enter username");
 		Scanner Password_verify = new Scanner(System.in);
 		this.setUsername(Password_verify.next());
+
 		System.out.println("Enter phoneno");
 		Scanner k = new Scanner(System.in);
 		this.setPhoneno(k.next());
@@ -131,6 +171,7 @@ public void createaccount() throws IOException{
 public void BuyProduct(User u) throws IOException {
 
 	int result = 0;
+
 	System.out.println("Our Products are   ........ ");
 
 	 String s0; 
@@ -163,9 +204,14 @@ while((s0 = br.readLine()) != null&(s1 = br.readLine()) != null&(s2 = br.readLin
 	             s1=read5.nextLine();
 		         
 	               if(s0.equalsIgnoreCase(v) ){
+
+	            	   System.out.println("the product price is :"); 
+	            	   System.out.println(s1); 
+
 	            	   System.out.println("the product price is :");
 	            	   //result = Integer.parseInt(s1);
 	            	   System.out.println(s1);
+
 	            	
 	            break;
 	            	   }}}
@@ -180,8 +226,12 @@ while((s0 = br.readLine()) != null&(s1 = br.readLine()) != null&(s2 = br.readLin
 			         s2 = read.nextLine();
 			         s3 = read.nextLine();
 	                          if(s0.equalsIgnoreCase(v) ){
+
+	                        	   System.out.println("the product price is :"); 
+
 	                           System.out.println("the product price is :");
 	                           result = Integer.parseInt(s1);
+
 	                       	   System.out.println(s1); 
 	                       	   System.out.println("the product brand is :"); 
 	                       	   System.out.println(s2);
@@ -193,6 +243,18 @@ while((s0 = br.readLine()) != null&(s1 = br.readLine()) != null&(s2 = br.readLin
 	                         
 	           		}
 	          
+
+			  
+			
+			
+			
+	
+		System.out.println("Please enter the amount You want  ");
+ 	   Scanner e1 = new Scanner(System.in);
+ 		 int v1 = e1.nextInt();
+ 		
+  		System.out.println("to buy this product press buy product  ");
+
 		System.out.println("Please enter the amount You want  ");
  	   Scanner e1 = new Scanner(System.in);
  		 int v1 = e1.nextInt();
@@ -200,6 +262,7 @@ while((s0 = br.readLine()) != null&(s1 = br.readLine()) != null&(s2 = br.readLin
  		String Dis = String.valueOf(Discount);
   		System.out.println("to buy this product press buy product  ");
   		
+
  		System.out.println("buy product? press 1 ");
  		System.out.println("else press 2");
 		 Scanner e5 = new Scanner(System.in);
@@ -215,6 +278,7 @@ while((s0 = br.readLine()) != null&(s1 = br.readLine()) != null&(s2 = br.readLin
   		System.out.println("--------------------");
   		System.out.println("Tax Calculation Services Fees: If you use the tax calculation services,\n ");
 			System.out.println("you will pay us 2.9% of all sales and use taxes and other transaction-based charges,we calculate\n");
+
 
 			System.out.println(" We will retain these fees in the event of any refund on related transactions. \n");
 			System.out.println("Calculation of Refunds: For products you fulfill,\n");
@@ -236,7 +300,11 @@ while((s0 = br.readLine()) != null&(s1 = br.readLine()) != null&(s2 = br.readLin
    		h.write("\n");
    		h.write(v);
 		h.write("\n");
+
+		h.write(s1);
+
 		h.write(Dis);
+
 		h.write("\n");
 		h.write(s2);
 		h.write("\n");
@@ -253,13 +321,23 @@ while((s0 = br.readLine()) != null&(s1 = br.readLine()) != null&(s2 = br.readLin
    		 }
  		}
  		else {
+
+ 			 System.out.println("the viewers pf the products is (Statistics) ");
+
  			 System.out.println("the viewers of the products is (Statistics) ");
+
  	   		 
  			
  			 System.out.println("THANKS FOR USING OUR WEBSITE  ");
     			 
  			
  		}
+
+}
+
+
+	
+
 
 }
 
@@ -283,3 +361,4 @@ public int Calculate_offer(int result,int amount) {
 
 	
 }
+

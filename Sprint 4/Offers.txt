@@ -6,3 +6,4 @@ phone
 100
 water
 10
+
